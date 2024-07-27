@@ -6,6 +6,7 @@ export default {
     content: [
         "./src/**/*.{html,js}",
         "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+        "./index.html",
     ],
     theme: {
         extend: {},

@@ -1,21 +1,22 @@
 {
-  "name": "pakka-kagaz-backend",
-  "version": "1.0.0",
-  "description": "The backend for our project PAKKA-KAGAZ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "CrowdStrike Interns",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2",
-    "module-alias": "^2.2.3",
-    "mongoose": "^8.5.1"
-  },
-  "devDependencies": {
-    "prettier": "^3.3.3"
-  }
+    "name": "pakka-kagaz-backend",
+    "version": "1.0.0",
+    "description": "The backend for our project PAKKA-KAGAZ",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "CrowdStrike Interns",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "jsonwebtoken": "^9.0.2",
+        "module-alias": "^2.2.3",
+        "mongoose": "^8.5.1"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.3"
+    }
 }

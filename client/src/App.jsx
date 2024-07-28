@@ -1,7 +1,16 @@
-import NavbarComp from "./components/Navbar";
 
-const App = () => {
-    return <NavbarComp />;
-};
+import './App.css'
+import Landing from './pages/Landing.jsx'
 
-export default App;
+
+function App() {
+
+
+  return (
+    <>
+     <Landing/>
+    </>
+  )
+}
+
+export default App

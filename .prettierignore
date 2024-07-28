@@ -1,0 +1,23 @@
+# Ignore dependencies
+node_modules/
+
+# Ignore build output directories
+build/
+dist/
+
+# Ignore test files
+*.test.js
+*.spec.js
+
+# Ignore generated files
+coverage/
+*.log
+
+# Ignore configuration files
+.eslintrc.js
+babel.config.js
+jest.config.js
+
+# Ignore specific files or directories
+src/legacy_code/
+src/someLargeFile.js

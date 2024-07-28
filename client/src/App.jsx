@@ -1,16 +1,12 @@
-
-import './App.css'
-import Landing from './pages/Landing.jsx'
-
+import "./App.css";
+import Landing from "./pages/Landing.jsx";
 
 function App() {
-
-
-  return (
-    <>
-     <Landing/>
-    </>
-  )
+    return (
+        <>
+            <Landing />
+        </>
+    );
 }
 
-export default App
+export default App;

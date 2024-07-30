@@ -1,5 +1,5 @@
 {
-    "name": "pakka-kagaz-backend",
+    "name": "pakka-kagaz",
     "version": "1.0.0",
     "description": "The backend for our project PAKKA-KAGAZ",
     "main": "index.js",

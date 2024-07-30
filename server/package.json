@@ -16,7 +16,17 @@
         "module-alias": "^2.2.3",
         "mongoose": "^8.5.1"
     },
+    "_moduleAliases": {
+        "@root"      : ".", 
+        "@routes"      : "./routes",
+        "@middlewares" : "./middlewares",
+        "@configs" : "./configurations",
+        "@controllers" : "./controllers"
+       
+    },
     "devDependencies": {
         "prettier": "^3.3.3"
     }
+    
+
 }

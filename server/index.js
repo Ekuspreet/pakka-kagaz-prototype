@@ -1,16 +1,16 @@
-import dotenv from "dotenv";
-import connectDB from "./database/index.js";
-import { app } from "./app.js";
-dotenv.config({
-    path: "./.env",
-});
+const express = require('express');
 
-connectDB()
-    .then(() => {
-        app.listen(process.env.PORT || 8000, () => {
-            console.log(`⚙️ Server is running at port : ${process.env.PORT}`);
-        });
-    })
-    .catch((err) => {
-        console.log("MONGO db connection failed !!! ", err);
-    });
+const app = express();
+
+// this will allow us to use the module-alias package to define aliases for our directories.
+require('module-alias/register')
+
+
+// Defining the routes here.
+require("@routes/web.routes.js")(app);
+require("@routes/api.routes.js")(app);
+
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});

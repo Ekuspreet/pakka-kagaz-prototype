@@ -10,7 +10,7 @@ const expressLayouts = require("express-ejs-layouts");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 app.use(expressLayouts);
-app.set("layout", "layouts/layout");
+app.set("layout", "layouts/layout", "layouts/auth.layout.ejs");
 
 app.use(express.static(__dirname + "/public"));
 

@@ -1,38 +1,39 @@
 {
-    "name": "pakka-kagaz",
-    "version": "1.0.0",
-    "description": "The backend for our project PAKKA-KAGAZ",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "watch": "concurrently \"nodemon index.js\" \"npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch\""
-    },
-    "author": "CrowdStrike Interns",
-    "license": "ISC",
-    "dependencies": {
-        "concurrently": "^8.2.2",
-        "dotenv": "^16.4.5",
-        "ejs": "^3.1.10",
-        "express": "^4.19.2",
-        "express-ejs-layouts": "^2.5.1",
-        "jsonwebtoken": "^9.0.2",
-        "module-alias": "^2.2.3",
-        "mongoose": "^8.5.1",
-        "path": "^0.12.7"
-    },
-    "_moduleAliases": {
-        "@root": ".",
-        "@routes": "./routes",
-        "@middlewares": "./middlewares",
-        "@configs": "./configurations",
-        "@controllers": "./controllers"
-    },
-    "devDependencies": {
-        "autoprefixer": "^10.4.19",
-        "daisyui": "^4.12.10",
-        "postcss": "^8.4.40",
-        "prettier": "^3.3.3",
-        "tailwindcss": "^3.4.7"
-    }
+  "name": "pakka-kagaz",
+  "version": "1.0.0",
+  "description": "The backend for our project PAKKA-KAGAZ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "concurrently \"nodemon index.js\" \"npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch\""
+  },
+  "author": "CrowdStrike Interns",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "module-alias": "^2.2.3",
+    "mongoose": "^8.5.1",
+    "path": "^0.12.7"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@routes": "./routes",
+    "@middlewares": "./middlewares",
+    "@configs": "./configurations",
+    "@controllers": "./controllers"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
+    "postcss": "^8.4.40",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.7",
+    "prettier-plugin-tailwindcss": "^0.6.5"
+  }
 }

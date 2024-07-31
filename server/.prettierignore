@@ -21,3 +21,5 @@ jest.config.js
 # Ignore specific files or directories
 src/legacy_code/
 src/someLargeFile.js
+
+*.ejs

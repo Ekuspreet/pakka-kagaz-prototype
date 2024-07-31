@@ -1,76 +1,58 @@
 <!doctype html>
 <html lang="en" data-theme="dracula">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pakka Kagaz</title>
-    <link rel="stylesheet" href="./css/output.css" />
-    <link rel="stylesheet" href="./css/globals.css" />
-    <link rel="icon" href="./assets/flaticon.svg" />
-  </head>
 
-  <body>
-    <!-- navbar -->
-    <div class="navbar bg-base-100 px-2">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu menu-md dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-52 p-2 shadow py-2"
-          >
-            <li><a>About</a></li>
-            <li><a>Services</a></li>
-            <li><a>Team</a></li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pakka Kagaz</title>
+  <link rel="stylesheet" href="./css/output.css" />
+  <link rel="stylesheet" href="./css/globals.css" />
+  <link rel="icon" href="./assets/flaticon.svg" />
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar bg-base-100 px-2">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
         </div>
-        <img
-          src="./assets/logo.svg"
-          class="btn btn-ghost btn-circle btn-lg"
-          alt=""
-        />
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+        <ul tabindex="0" class="menu menu-md dropdown-content bg-base-200 rounded-box z-[1] mt-3 w-52 p-2 shadow py-2">
           <li><a>About</a></li>
           <li><a>Services</a></li>
-          <li><a>Team</a></li>
+          <li><a href="#team-members">Team</a></li>
         </ul>
       </div>
-      <div class="navbar-end">
-        <a class="btn">Login</a>
-      </div>
+      <img src="./assets/logo.svg" class="btn btn-ghost btn-circle btn-lg" alt="" />
     </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>About</a></li>
+        <li><a>Services</a></li>
+        <li><a href="#team-members">Team</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <a class="btn">Login</a>
+    </div>
+  </div>
 
-    <%- body %>
+  <%- body %>
     <!-- This is where the content of the page will be injected -->
-  </body>
-  <!-- footer -->
-  <footer
-    class="footer footer-center bg-base-200 text-base-content rounded p-10"
-  >
-    <div class="footer-title">Team CrowdStrike Interns</div>
+</body>
+<!-- footer -->
+<footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+  <div class="footer-title">Team CrowdStrike Interns</div>
 
-    <aside>
-      <p>
-        Copyright © <%= new Date().getFullYear() %> - All right reserved by
+  <aside>
+    <p>
+      Copyright © <%= new Date().getFullYear() %> - All right reserved by
         Team CrowdStrike Interns
-      </p>
-    </aside>
-  </footer>
+    </p>
+  </aside>
+</footer>
+
 </html>

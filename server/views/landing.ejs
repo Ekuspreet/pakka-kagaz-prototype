@@ -18,12 +18,68 @@
 
 <!-- Team section starts here -->
 
-<div class="p-4">
+<section id="team-members" class="p-4">
   <div class="text-2xl text-center m-4">Our Team</div>
 
   <div class="flex justify-center items-center flex-row flex-wrap">
     <%- include('./partials/team-member.ejs',
-      {"avatar": "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" , "name" : "John Doe"
-      , "role" : "CEO" }) %>
+        { "avatar": "https://media.licdn.com/dms/image/D4D03AQG3iV0lxuvsqQ/profile-displayphoto-shrink_800_800/0/1694248599958?e=1727913600&v=beta&t=e0kpSL73DuPidpEu3yxQYWQCUi69d8uJnfgFE9JKZaA" , 
+          "name" : "Chandanbir Singh",
+          "description" : "CrowdStrike Intern #1", 
+          "linkedinurl" : "", 
+          "githuburl" : "" 
+          }) 
+    %>
+        
+    <%- include('./partials/team-member.ejs',
+          { "avatar": "/assets/ekuspreet.jpg" , 
+            "name" : "Ekuspreet Singh",
+            "description" : "CrowdStrike Intern #2", 
+            "linkedinurl" : "", 
+            "githuburl" : "" 
+            }) 
+    %>
+          
+    <%- include('./partials/team-member.ejs',
+    { "avatar": "https://media.licdn.com/dms/image/D5603AQFpuEZHDR30XQ/profile-displayphoto-shrink_800_800/0/1722441823217?e=1727913600&v=beta&t=t9QFWUWzTWpIRqm4nhH88doL2Y_BJZlQCDW92Q3pPSI" , 
+      "name" : "Ankush Makkar",
+      "description" : "CrowdStrike Intern #3", 
+      "linkedinurl" : "", 
+      "githuburl" : "" 
+      }) 
+    %>
+    <%- include('./partials/team-member.ejs',
+    { "avatar": "https://media.licdn.com/dms/image/C5603AQFSE1bys5P24w/profile-displayphoto-shrink_800_800/0/1647158429721?e=1727913600&v=beta&t=rRVTJ8-7dTkHeU7xqngMeljTNuhsTuZUuZ46v8q3ttU" , 
+      "name" : "Dilraj Singh",
+      "description" : "CrowdStrike Intern #4", 
+      "linkedinurl" : "", 
+      "githuburl" : "" 
+      }) 
+    %>
+
   </div>
 </div>
+
+
+<!-- About project section -->
+
+<Section>
+
+
+  <div class="text-2xl text-center m-4">About Pakka Kagaz</div>
+
+  <div class="flex justify-center items-center flex-row flex-wrap">
+    <div class="card bordered m-4" style="width: 20rem;">
+      <div class="card-body">
+        <h2 class="card-title
+        ">What is Pakka Kagaz?</h2>
+        <p>
+          Pakka Kagaz is a blockchain-based platform that allows creators to
+          securely record and timestamp their creative works. It provides
+          insights into intellectual property protection and safeguards your
+          ideas.
+        </p>
+      </div>
+    </div>
+    
+</Section>

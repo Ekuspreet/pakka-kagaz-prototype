@@ -1,10 +1,19 @@
 const express = require('express');
 
 const app = express();
-
-// this will allow us to use the module-alias package to define aliases for our directories.
+const  path = require('path');
+// imports 
 require('module-alias/register')
+const expressLayouts = require('express-ejs-layouts');
 
+
+// Setting up the view engine.
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
+app.use(expressLayouts);
+app.set('layout', 'layouts/layout');
+
+app.use(express.static(__dirname + '/public'))
 
 // Defining the routes here.
 require("@routes/web.routes.js")(app);

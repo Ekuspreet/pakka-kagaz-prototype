@@ -1,12 +1,14 @@
 // defining the routes for the web application
-
 // Setting up the controllers.
 
-const statusController = require('@controllers/web/status.controller');
 
-module.exports = (app) =>{
+const statusController = require('@controllers/web/status.controller');
+const landingPageController = require('@controllers/web/landingPage.controller');
+
+module.exports =  (app) =>{
+    // all controllers will export an instance of Router Class. (Not the actual functions).
     app.get('/status', statusController);
-    // all controllers will export a instance of Router Class. ( Not the actual functions).
+    app.get('/', landingPageController);
 }
 
 

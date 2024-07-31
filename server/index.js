@@ -12,7 +12,7 @@ app.set("views", path.join(__dirname, "./views"));
 app.use(expressLayouts);
 app.set("layout", "layouts/layout", "layouts/auth.layout.ejs");
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("./public"));
 
 // Defining the routes here.
 require("@routes/web.routes.js")(app);

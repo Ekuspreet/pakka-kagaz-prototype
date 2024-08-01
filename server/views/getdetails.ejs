@@ -1,1 +1,55 @@
-<div>get details</div>
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
+      Open drawer
+    </label>
+    <form id="get-idea-form" class="form-control">
+      <input
+        class="input input-bordered w-full"
+        type="number"
+        id="ideaId"
+        placeholder="Idea ID"
+        required
+      />
+    </form>
+    <h1>Title:</h1>
+    <div id="show-idea-1"></div>
+    <h1>Inventor:</h1>
+    <div id="show-idea-2"></div>
+    <h1>Description:</h1>
+    <div id="show-idea-3"></div>
+    <h1>Filelink:</h1>
+    <div id="show-idea-4"></div>
+    <!-- <h1>Idea Details</h1>
+    <ul>
+      <li><strong>ID:</strong> {idea.id}</li>
+      <li><strong>Title:</strong> {idea.title}</li>
+      <li><strong>Inventor:</strong> {idea.inventor}</li>
+      <li><strong>Description:</strong> {idea.description}</li>
+      <li>
+        <strong>File URL:</strong>
+        <a href="{idea.fileUrl}" target="_blank" rel="noopener noreferrer"
+          >{idea.fileUrl}</a
+        >
+      </li>
+      <li>
+        <strong>Timestamp:</strong> {new Date(idea.timestamp *
+        1000).toLocaleString()}
+      </li>
+    </ul> -->
+  </div>
+  <div class="drawer-side">
+    <label
+      for="my-drawer-2"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><a href="/home/add-new">Add new Idea</a></li>
+      <li><a href="/home/getdetails">Get Idea details</a></li>
+    </ul>
+  </div>
+</div>

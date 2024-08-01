@@ -1,1 +1,37 @@
-<div>Add new Idea</div>
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
+      Open drawer
+    </label>
+    <h1>Smart Contract Interaction</h1>
+    <form
+      id="issue-idea-form"
+      class="flex flex-col mx-auto w-full gap-2 max-w-96"
+    >
+      <input type="text" id="title" placeholder="Title" required />
+      <input type="text" id="inventor" placeholder="Inventor" required />
+      <textarea id="description" placeholder="Description" required></textarea>
+      <input type="text" id="fileUrl" placeholder="File URL" required />
+      <button type="submit">Issue Idea</button>
+    </form>
+    <button id="connect-wallet" onclick="connectWallet()" class="btn">
+      connect wallet
+    </button>
+
+    <div id="idea-details"></div>
+  </div>
+  <div class="drawer-side">
+    <label
+      for="my-drawer-2"
+      aria-label="close sidebar"
+      class="drawer-overlay"
+    ></label>
+    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <!-- Sidebar content here -->
+      <li><a href="/home/add-new">Add new Idea</a></li>
+      <li><a href="/home/getdetails">Get Idea details</a></li>
+    </ul>
+  </div>
+</div>

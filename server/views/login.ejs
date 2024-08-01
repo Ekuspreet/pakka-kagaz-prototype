@@ -1,5 +1,5 @@
 <div
-  class="flex p-14 overflow-hidden items-center justify-center "
+  class="flex p-14 overflow-hidden items-center justify-center"
   style="
     background-image: url(https://cdn.pixabay.com/photo/2020/06/04/11/10/bulb-5258341_1280.jpg);
     background-position: center;
@@ -14,12 +14,7 @@
         <div class="form-control gap-2">
           <label class="input input-bordered flex items-center gap-2">
             <%- include('./svgs/avatar.ejs') %>
-            <input
-              type="email"
-              class="grow"
-              name="email"
-              placeholder="Email"
-            />
+            <input type="email" class="grow" name="email" placeholder="Email" />
           </label>
           <label class="input input-bordered flex items-center gap-2">
             <%- include('./svgs/key.ejs') %>
@@ -30,23 +25,15 @@
               class="grow"
             />
           </label>
-
         </div>
 
         <div class="card-actions flex items-center justify-center">
-
           <button type="submit" class="btn btn-primary btn-wide">Login</button>
         </div>
 
         <div class="divider">or</div>
-
-<<<<<<< HEAD
-        <a class="link w-full text-center" href="/auth/register"> Create New Account </a>
-=======
-        <a href="/auth/register" class="link w-full text-center">
+        <a class="link w-full text-center" href="/auth/register">
           Create New Account
-        </a>
->>>>>>> 4d0d38e2c405272b007ef860cc85e4b52566273c
       </div>
     </form>
   </div>

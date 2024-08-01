@@ -7,7 +7,9 @@
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
       Open drawer
     </label>
-    <h1 class="w-full text-center">Connect Wallet and get Details of Idea Stamps</h1>
+    <h1 class="w-full text-center">
+      Connect Wallet and get Details of Idea Stamps
+    </h1>
     <button
       id="connect-wallet"
       onclick="connectWallet()"
@@ -24,17 +26,47 @@
         required
       />
     </form>
-    <div>
+
+    <div class="overflow-x-auto">
+      <table class="table">
+        <tbody>
+          <!-- row 1 -->
+          <tr class="bg-base-200">
+            <th>1</th>
+            <td>Title</td>
+            <td id="show-idea-1"></td>
+          </tr>
+          <!-- row 2 -->
+          <tr>
+            <th>2</th>
+            <td>Inventor</td>
+            <td id="show-idea-2"></td>
+          </tr>
+          <!-- row 3 -->
+          <tr>
+            <th>3</th>
+            <td>Description</td>
+            <td id="show-idea-3"></td>
+          </tr>
+          <!-- row 4 -->
+          <tr>
+            <th>4</th>
+            <td>File URL</td>
+            <td id="show-idea-4"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- <div>
       <h1>Title:</h1>
       <div id="show-idea-1"></div>
-
       <h1>Inventor:</h1>
       <div id="show-idea-2"></div>
       <h1>Description:</h1>
       <div id="show-idea-3"></div>
       <h1>Filelink:</h1>
       <div id="show-idea-4"></div>
-    </div>
+    </div> -->
     <!-- <h1>Idea Details</h1>
     <ul>
       <li><strong>ID:</strong> {idea.id}</li>

@@ -1,8 +1,10 @@
 const express = require("express");
 
+// imports
 const app = express();
 const path = require("path");
-// imports
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 require("module-alias/register");
 const expressLayouts = require("express-ejs-layouts");
 
@@ -13,7 +15,9 @@ app.use(expressLayouts);
 app.set("layout", "layouts/layout", "layouts/auth.layout.ejs");
 
 app.use(express.static("./public"));
-
+app.use(bodyParser.json());
+app.use(cookieParser());
+require('dotenv').config();
 // Defining the routes here.
 require("@routes/web.routes.js")(app);
 require("@routes/api.routes.js")(app);

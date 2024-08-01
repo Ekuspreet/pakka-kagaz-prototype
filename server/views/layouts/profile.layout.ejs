@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="dracula">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pakka Kagaz</title>
+    <link rel="stylesheet" href="/css/output.css" />
+    <link rel="stylesheet" href="/css/globals.css" />
+    <link rel="icon" href="/assets/flaticon.svg" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="navbar bg-base-100 px-2">
+      <div class="navbar-start">
+        <a href="">
+          <img
+            src="/assets/logo.svg"
+            class="btn btn-ghost btn-circle btn-lg"
+            alt=""
+        /></a>
+      </div>
+
+      <div class="navbar-end">
+        <a class="btn" onclick="window.location.href = '/'">Ekuspreet!</a>
+      </div>
+    </div>
+
+    <%- body %>
+    <!-- This is where the content of the page will be injected -->
+  </body>
+  <!-- footer -->
+  <footer
+    class="footer footer-center bg-base-200 text-base-content rounded p-10"
+  >
+    <div class="footer-title">Team CrowdStrike Interns</div>
+
+    <aside>
+      <p>
+        Copyright © <%= new Date().getFullYear() %> - All right reserved by
+        Team CrowdStrike Interns
+      </p>
+    </aside>
+  </footer>
+</html>

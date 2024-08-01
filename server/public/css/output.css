@@ -5214,10 +5214,6 @@ html:has(.drawer-open.drawer-open) {
   display: none;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -5232,6 +5228,10 @@ html:has(.drawer-open.drawer-open) {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .max-h-screen {
@@ -5278,10 +5278,6 @@ html:has(.drawer-open.drawer-open) {
   width: 16rem;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .w-96 {
   width: 24rem;
 }
@@ -5290,13 +5286,13 @@ html:has(.drawer-open.drawer-open) {
   width: 100%;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.max-w-96 {
-  max-width: 24rem;
 }
 
 .max-w-md {
@@ -5304,6 +5300,10 @@ html:has(.drawer-open.drawer-open) {
 }
 
 .max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-96 {
   max-width: 24rem;
 }
 

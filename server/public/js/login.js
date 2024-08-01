@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then((data) => {
                 console.log(data);
                 alert(data.message);
+                window.location.href = "/home";
             })
             .catch((error) => {
                 alert(error.data.message);

@@ -1,7 +1,6 @@
 // after loading UI
 document.addEventListener("DOMContentLoaded", function () {
     const loginForm = document.getElementById("login-form");
-    console.log(loginForm);
 
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             })
             .then((data) => {
-                console.log(data);
                 alert(data.message);
                 window.location.href = "/home";
             })

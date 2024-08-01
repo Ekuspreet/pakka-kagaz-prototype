@@ -588,23 +588,22 @@ const abi = [
 ];
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 // Define your contract details
-const contractAddress = "0xcA3096a7B1aB28DFb8c8676fd777ae2C18DD999e";
+const contractAddress = "0x0DB612cfB3A8f2F470892b61128f52EcDA91Ab15";
 
 // Initialize signer
 let signer = provider.getSigner();
 
 async function connectWallet() {
   await provider.send("eth_requestAccounts", []);
-  console.log(signer);
 }
 // Initialize contract
 const contract = new ethers.Contract(contractAddress, abi, signer);
 
 async function connectWallet() {
-  console.log(window.location.pathname);
   if (
     window.location.pathname === "/home/add-new" ||
-    window.location.pathname === "/home/getdetails"
+    window.location.pathname === "/home/getdetails" ||
+    window.location.pathname === "/home"
   ) {
     try {
       document.getElementById("connect-wallet").disabled = true;

@@ -1,10 +1,35 @@
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex flex-col items-center justify-center">
+  <div class="drawer-content flex flex-col items-center mt-4 justify-start">
     <!-- Page content here -->
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
       Open drawer
     </label>
+    <h1 class="w-full text-center">
+      Connect Wallet and get Details of All Idea Stamps
+    </h1>
+    <button
+      id="connect-wallet"
+      onclick="connectWallet()"
+      class="btn btn-accent my-2"
+    >
+      Connect wallet
+    </button>
+    <div class="overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Public Url</th>
+          </tr>
+        </thead>
+        <tbody class="ideas-table-body"></tbody>
+      </table>
+    </div>
   </div>
   <div class="drawer-side">
     <label
@@ -14,8 +39,10 @@
     ></label>
     <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
       <!-- Sidebar content here -->
+      <li><a href="/home">Home</a></li>
       <li><a href="/home/add-new">Add new Idea</a></li>
       <li><a href="/home/getdetails">Get Idea details</a></li>
     </ul>
   </div>
 </div>
+<script src="/js/home.js"></script>

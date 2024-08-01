@@ -20,6 +20,7 @@ contract IdeaRegistry is ERC721URIStorage, Ownable {
 
   uint256 public ideaCounter;
   mapping(uint256 => Idea) public ideas;
+  mapping(address => uint256[]) Owns;
 
   event IdeaIssued(
     uint256 id,
@@ -46,6 +47,7 @@ contract IdeaRegistry is ERC721URIStorage, Ownable {
       block.timestamp
     );
     _mint(msg.sender, ideaCounter);
+    // Owns[msg.sender].push_back(ideaCounter);
 
     string memory metadata = string(
       abi.encodePacked(

@@ -1,51 +1,55 @@
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex flex-col items-center justify-center">
+  <div
+    class="drawer-content flex flex-col items-center w-full h-fit my-auto gap-4 justify-center"
+  >
     <!-- Page content here -->
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
       Open drawer
     </label>
-
-    <h1>Smart Contract Interaction</h1>
-    <form
-      id="issue-idea-form"
-      class="flex flex-col mx-auto w-full gap-2 max-w-96"
+    <h1 class="w-full text-center">Connect Wallet and Issue a Idea Stamp</h1>
+    <button
+      id="connect-wallet"
+      onclick="connectWallet()"
+      class="btn btn-accent mt-2"
     >
-      <input
-        type="text"
-        id="title"
-        placeholder="Title"
-        required
-        class="input input-bordered w-full max-w-xs"
-      />
-      <input
-        type="text"
-        id="inventor"
-        placeholder="Inventor"
-        required
-        class="input input-bordered w-full max-w-xs"
-      />
-      <textarea
-        id="description"
-        placeholder="Description"
-        class="input input-bordered w-full max-w-xs h-24"
-      ></textarea>
-      <input
-        type="text"
-        id="fileUrl"
-        placeholder="File URL"
-        required
-        class="input input-bordered w-full max-w-xs"
-      />
-      <button type="submit">Issue Idea</button>
-    </form>
-    <br />
-    <button id="connect-wallet" onclick="connectWallet()" class="btn">
-      connect wallet
+      Connect wallet
     </button>
+    <div class="w-96 m-auto">
+      <form id="issue-idea-form" class="flex flex-col mx-auto w-full gap-2">
+        <input
+          type="text"
+          id="title"
+          placeholder="Title"
+          required
+          class="input input-bordered w-full"
+        />
+        <input
+          type="text"
+          id="inventor"
+          placeholder="Inventor"
+          required
+          class="input input-bordered w-full"
+        />
+        <textarea
+          id="description"
+          placeholder="Description"
+          class="input input-bordered w-full h-24"
+        ></textarea>
+        <input
+          type="text"
+          id="fileUrl"
+          placeholder="File URL"
+          required
+          class="input input-bordered w-full"
+        />
+        <button type="submit" class="w-fit mx-auto mt-2 btn btn-primary">
+          Issue Idea
+        </button>
+      </form>
+    </div>
     <%- include('./partials/modal.ejs' , { "modalID" : "txn_success","modalTitle": "Idea Issued Succesfully", "modalMessage":"Congratulations Your Idea is Now Protected and  Preserved !!"} ) %>
     <%- include('./partials/loader.ejs' , { "modalID" : "loader_modal" }) %>
-
   </div>
   <div class="drawer-side">
     <label

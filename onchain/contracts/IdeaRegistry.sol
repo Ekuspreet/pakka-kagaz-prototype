@@ -28,7 +28,7 @@ contract IdeaRegistry is ERC721URIStorage, Ownable {
     uint256 timestamp
   );
 
-  constructor() ERC721("IdeaNFT", "IDEA") {}
+  constructor() ERC721("PAKKA KAGAZ", "PKZ") {}
 
   function issueIdea(
     string memory _title,

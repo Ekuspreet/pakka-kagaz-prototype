@@ -14,17 +14,16 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.get("/add-new", (req, res) => {
-  const user = {};
-  user.name = "John Doe";
+router.get("/add-new", async (req, res) => {
+  const user = await auth(req, res);
+  console.log(user);
   res.render("addnew", {
     layout : "layouts/profile.layout.ejs",
     user : user,
   });
 });
-router.get("/getdetails", (req, res) => {
-  const user = {};
-  user.name = "John Doe";
+router.get("/getdetails", async (req, res) => {
+  const user = await auth(req, res);
   res.render("getdetails", {
     layout : "layouts/profile.layout.ejs",
     user : user,

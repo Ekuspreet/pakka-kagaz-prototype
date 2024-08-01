@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
         const hashedPassword = await argon2.hash(user.password);
         
         // Insert the user with the hashed password
-        const result = await collection.insertOne({ ...user, password: hashedPassword });
+        const result = await collection.insertOne({ ...user, password: hashedPassword, isBanned: false });
         await client.close();
         
         // Set the inserted ID in the response header

@@ -30,8 +30,8 @@ router.post("/", async (req, res) => {
 
         await client.close();
 
-        // Generate a JWT with the user's object ID as the payload
-        const token = jwt.sign({ userId: user._id.toString() }, process.env.JWT_SECRET);
+        // Generate a JWT with the user's email as the payload
+        const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET);
 
         // Set the JWT in a cookie
         res.cookie('token', token, { httpOnly: true });

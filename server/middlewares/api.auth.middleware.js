@@ -1,4 +1,5 @@
 const { MongoClient } = require('mongodb');
+const jwt = require('jsonwebtoken');
 
 const webAuthMiddleware = async (req, res, next) => {
     try {
@@ -7,27 +8,36 @@ const webAuthMiddleware = async (req, res, next) => {
         if (!cookie) {
             return res.status(401).json({ message: 'Unauthorized' });
         }
+        
+        console.log("cookie received");
 
-        const uri = process.env.MONGO_CONNECTION_URI; // Replace with your MongoDB connection URI
+        const uri = process.env.MONGO_CONNECTION_URI;
+
         const client = new MongoClient(uri);
-
         await client.connect();
 
         const db = client.db('PakkaKagaz'); 
         const usersCollection = db.collection('users');
-        const user = await usersCollection.findOne({ _id: cookie });
+        console.log(cookie);
 
-        if (!user || user.isBanned) {
-            return res.status(403).json({ message: 'Forbidden' });
+        try {
+            // Verify the cookie using JWT
+            const decoded = jwt.verify(cookie, process.env.JWT_SECRET); 
+            const useremail = decoded.email;
+        
+            const user = await usersCollection.findOne({ email : useremail });
+        
+            if (!user || user.isBanned) {
+                return res.status(403).json({ message: 'Forbidden' });
+            }
+        
+            return user;
+        } catch (error) {
+            return res.status(401).json({ message: 'Unauthorized' });
         }
-
-        return user;
     } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Internal Server Error' });
-    } finally {
-        client.close(); // Close the MongoDB connection
-    }
+        return res.status(500).json({ message: 'Internal Server Error' });
+    } 
 };
 
 module.exports = webAuthMiddleware;

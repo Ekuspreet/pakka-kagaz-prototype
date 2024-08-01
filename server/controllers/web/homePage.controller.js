@@ -14,4 +14,21 @@ router.get("/", async (req, res) => {
   });
 });
 
+router.get("/add-new", (req, res) => {
+  const user = {};
+  user.name = "John Doe";
+  res.render("addnew", {
+    layout : "layouts/profile.layout.ejs",
+    user : user,
+  });
+});
+router.get("/getdetails", (req, res) => {
+  const user = {};
+  user.name = "John Doe";
+  res.render("getdetails", {
+    layout : "layouts/profile.layout.ejs",
+    user : user,
+  });
+});
+
 module.exports = router;

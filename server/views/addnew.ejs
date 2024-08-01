@@ -5,22 +5,46 @@
     <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">
       Open drawer
     </label>
+
     <h1>Smart Contract Interaction</h1>
     <form
       id="issue-idea-form"
       class="flex flex-col mx-auto w-full gap-2 max-w-96"
     >
-      <input type="text" id="title" placeholder="Title" required />
-      <input type="text" id="inventor" placeholder="Inventor" required />
-      <textarea id="description" placeholder="Description" required></textarea>
-      <input type="text" id="fileUrl" placeholder="File URL" required />
+      <input
+        type="text"
+        id="title"
+        placeholder="Title"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+      <input
+        type="text"
+        id="inventor"
+        placeholder="Inventor"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
+      <textarea
+        id="description"
+        placeholder="Description"
+        class="input input-bordered w-full max-w-xs h-24"
+      ></textarea>
+      <input
+        type="text"
+        id="fileUrl"
+        placeholder="File URL"
+        required
+        class="input input-bordered w-full max-w-xs"
+      />
       <button type="submit">Issue Idea</button>
     </form>
+    <br />
     <button id="connect-wallet" onclick="connectWallet()" class="btn">
       connect wallet
     </button>
 
-    <div id="idea-details"></div>
+    <!-- <div id="idea-details"></div> -->
   </div>
   <div class="drawer-side">
     <label

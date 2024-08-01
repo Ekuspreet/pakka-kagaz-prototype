@@ -1,28 +1,16 @@
-const provider = new ethers.providers.Web3Provider(window.ethereum);
-// Define your contract details
-const contractAddress = "0xcA3096a7B1aB28DFb8c8676fd777ae2C18DD999e";
-
-// Initialize signer
-let connected = false;
-let signer = provider.getSigner();
-console.log(signer);
-
-async function connectWallet() {
-  await provider.send("eth_requestAccounts", []);
-  console.log("Wallet connected!");
-  console.log(signer);
-  connected = true;
-}
-// Initialize contract
-const contract = new ethers.Contract(contractAddress, abi, signer);
-
 async function issueIdea(title, inventor, description, fileUrl) {
   try {
+    loader_modal.showModal();
     const tx = await contract.issueIdea(title, inventor, description, fileUrl);
     await tx.wait();
-    console.log("Idea issued successfully!");
+    const txUrl = "https://amoy.polygonscan.com/tx/" + tx.hash;
+    console.log("Idea issued:", txUrl);
+    txn_success.showModal();
+    document.getElementById("txUrl").href = txUrl;
   } catch (error) {
     console.error("Error issuing idea:", error);
+  } finally {
+    loader_modal.close();
   }
 }
 

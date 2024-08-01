@@ -5214,6 +5214,10 @@ html:has(.drawer-open.drawer-open) {
   display: none;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -5230,8 +5234,12 @@ html:has(.drawer-open.drawer-open) {
   height: 100vh;
 }
 
-.h-24 {
-  height: 6rem;
+.h-full {
+  height: 100%;
+}
+
+.h-32 {
+  height: 8rem;
 }
 
 .max-h-screen {
@@ -5258,6 +5266,14 @@ html:has(.drawer-open.drawer-open) {
   min-height: 100vh;
 }
 
+.min-h-\[80vh\] {
+  min-height: 80vh;
+}
+
+.min-h-\[85vh\] {
+  min-height: 85vh;
+}
+
 .w-4 {
   width: 1rem;
 }
@@ -5278,6 +5294,10 @@ html:has(.drawer-open.drawer-open) {
   width: 16rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-96 {
   width: 24rem;
 }
@@ -5286,13 +5306,17 @@ html:has(.drawer-open.drawer-open) {
   width: 100%;
 }
 
-.w-80 {
-  width: 20rem;
-}
-
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.max-w-96 {
+  max-width: 24rem;
 }
 
 .max-w-md {
@@ -5303,12 +5327,12 @@ html:has(.drawer-open.drawer-open) {
   max-width: 24rem;
 }
 
-.max-w-96 {
-  max-width: 24rem;
-}
-
 .max-w-xs {
   max-width: 20rem;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink {
@@ -5333,6 +5357,16 @@ html:has(.drawer-open.drawer-open) {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
 .cursor-pointer {
@@ -5423,9 +5457,27 @@ html:has(.drawer-open.drawer-open) {
   border-width: 1px;
 }
 
+.border-8 {
+  border-width: 8px;
+}
+
+.border-t-8 {
+  border-top-width: 8px;
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+.border-t-green-400 {
+  --tw-border-opacity: 1;
+  border-top-color: rgb(74 222 128 / var(--tw-border-opacity));
 }
 
 .bg-base-100 {
@@ -5476,6 +5528,10 @@ html:has(.drawer-open.drawer-open) {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-opacity-60 {
@@ -5720,6 +5776,10 @@ html:has(.drawer-open.drawer-open) {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-linear {
+  transition-timing-function: linear;
 }
 
 @media (hover:hover) {

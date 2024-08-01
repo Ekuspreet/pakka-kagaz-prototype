@@ -586,3 +586,26 @@ const abi = [
     type: "function",
   },
 ];
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+// Define your contract details
+const contractAddress = "0xcA3096a7B1aB28DFb8c8676fd777ae2C18DD999e";
+
+// Initialize signer
+let connected = false;
+let signer = provider.getSigner();
+console.log(signer);
+
+async function connectWallet() {
+  await provider.send("eth_requestAccounts", []);
+  console.log("Wallet connected!");
+  console.log(signer);
+  connected = true;
+}
+// Initialize contract
+const contract = new ethers.Contract(contractAddress, abi, signer);
+
+async function connectWallet() {
+  await provider.send("eth_requestAccounts", []);
+  console.log(signer);
+  connected = true;
+}

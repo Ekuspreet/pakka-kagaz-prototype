@@ -1,11 +1,3 @@
-//* abi leke ao ethe
-
-
-// Assuming the contract code is initialized here as described earlier
-
-
-
-
 document
   .getElementById("get-idea-form")
   .addEventListener("submit", async (event) => {
@@ -29,5 +21,3 @@ async function getIdea(id) {
     console.error("Error fetching idea:", error);
   }
 }
-
-console.log("web3.js loaded");

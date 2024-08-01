@@ -40,11 +40,12 @@
       <button type="submit">Issue Idea</button>
     </form>
     <br />
-    <button id="connect-wallet" onclick="await connectWallet()" class="btn">
+    <button id="connect-wallet" onclick="connectWallet()" class="btn">
       connect wallet
     </button>
+    <%- include('./partials/modal.ejs' , { "modalID" : "txn_success","modalTitle": "Idea Issued Succesfully", "modalMessage":"Congratulations Your Idea is Now Protected and  Preserved !!"} ) %>
+    <%- include('./partials/loader.ejs' , { "modalID" : "loader_modal" }) %>
 
-    <!-- <div id="idea-details"></div> -->
   </div>
   <div class="drawer-side">
     <label

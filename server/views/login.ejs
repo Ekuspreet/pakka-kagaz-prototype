@@ -1,5 +1,5 @@
 <div
-  class="flex p-12 overflow-hidden items-center justify-center my-2"
+  class="flex p-14 overflow-hidden items-center justify-center "
   style="
     background-image: url(https://cdn.pixabay.com/photo/2020/06/04/11/10/bulb-5258341_1280.jpg);
     background-position: center;
@@ -7,18 +7,18 @@
   "
 >
   <div class="card glass w-96">
-    <form class="card-header">
+    <form class="card-header" id="login-form">
       <div class="card-body">
-        <h2 class="card-title">Login Here !!</h2>
+        <h2 class="card-title ml-1">LOGIN</h2>
 
         <div class="form-control gap-2">
           <label class="input input-bordered flex items-center gap-2">
             <%- include('./svgs/avatar.ejs') %>
             <input
-              type="text"
+              type="email"
               class="grow"
-              name="phone_number"
-              placeholder="Phone or Mail"
+              name="email"
+              placeholder="Email"
             />
           </label>
           <label class="input input-bordered flex items-center gap-2">
@@ -26,29 +26,24 @@
             <input
               type="password"
               name="password"
-              placeholder="Your Super Secret Passward"
+              placeholder="Your Super Secret Password"
               class="grow"
             />
           </label>
 
-          <div class="form-control">
-            <label class="label cursor-pointer justify-start flex gap-1">
-              <input type="checkbox" class="checkbox" />
-              <span class="label-text">Remember me</span>
-            </label>
-          </div>
         </div>
 
-        <div class="card-actions flex items-center justify-between">
-          <a class="link link-primary"> Forgot Password? </a>
+        <div class="card-actions flex items-center justify-center">
 
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary btn-wide">Login</button>
         </div>
 
         <div class="divider">or</div>
 
-        <a class="link w-full text-center"> Create New Account </a>
+        <a class="link w-full text-center" href="/auth/register"> Create New Account </a>
       </div>
     </form>
   </div>
 </div>
+
+<script src="/js/login.js"></script>

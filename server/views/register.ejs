@@ -1,58 +1,76 @@
-<div class="flex justify-center items-center h-screen">
+<div
+  class="flex justify-center items-center p-10"
+  style="
+    background-image: url(https://cdn.pixabay.com/photo/2020/07/20/07/25/bulb-5422145_1280.jpg);
+
+    background-size: cover;
+  "
+>
   <div class="card glass w-96">
-    <form class="card-header">
+    <form class="card-header" id="registration-form">
       <div class="card-body">
-        <h2 class="card-title">Register now !!</h2>
+        <h2 class="card-title ml-1">REGISTER</h2>
 
         <div class="form-control gap-2">
           <label class="input input-bordered flex items-center gap-2">
-            <%- include('./svgs/avatar.ejs') %>
+            <%- include('./svgs/mail.ejs') %>
             <input
-              type="text"
+              required
+              type="email"
               class="grow"
-              name="phone_number"
+              name="email"
               placeholder="Email"
             />
           </label>
+
           <label class="input input-bordered flex items-center gap-2">
-            <%- include('./svgs/key.ejs') %>
+            <%- include('./svgs/avatar.ejs') %>
             <input
-              type="password"
-              name="password"
-              placeholder="Passward"
+              required
+              type="name"
+              name="name"
+              placeholder="Username"
               class="grow"
             />
           </label>
+
           <label class="input input-bordered flex items-center gap-2">
             <%- include('./svgs/key.ejs') %>
             <input
+              required
               type="password"
               name="password"
-              placeholder="Confirm Passward"
+              placeholder="Password"
               class="grow"
             />
           </label>
 
           <div class="form-control">
-            <label class="label cursor-pointer justify-start flex gap-1">
-              <input type="checkbox" class="checkbox" />
-              <span class="label-text">I Accept T&C </span>
-            </label>
+            <p>
+              By Registering, I Agree To The
+              <a class="link link-primary" href="/policy/terms-and-conditions">
+                Terms & Conditions</a
+              >
+            </p>
           </div>
         </div>
 
-        <div class="card-actions flex items-center justify-between">
+        <div class="card-actions flex items-center justify-center">
           <!-- <a class="link link-primary"> Forgot Password? </a> -->
 
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary btn-wide">
             Create your Account
           </button>
         </div>
 
         <div class="divider">or</div>
 
-        <a class="link w-full text-center"> Already have Account </a>
+        <a class="link w-full text-center" href="/auth/login">
+          Already Have An Account
+        </a>
       </div>
     </form>
   </div>
 </div>
+
+<script src="/js/register.js"></script>

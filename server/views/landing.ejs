@@ -1,6 +1,9 @@
-<div class="hero min-h-[30em]" style="
+<div
+  class="hero min-h-[30em]"
+  style="
     background-image: url(https://cdn.pixabay.com/photo/2017/08/01/13/47/light-2565575_1280.jpg);
-  ">
+  "
+>
   <div class="hero-overlay bg-opacity-60"></div>
   <div class="hero-content text-neutral-content text-center">
     <div class="max-w-md">
@@ -11,7 +14,9 @@
         Securely record and timestamp your creative works using blockchain. Gain
         insights into intellectual property protection and safeguard your ideas.
       </p>
-      <button class="btn" onclick="window.location.href = '/auth/register'">Get Started!</button>
+      <button class="btn" onclick="window.location.href = '/auth/register'">
+        Get Started!
+      </button>
     </div>
   </div>
 </div>
@@ -22,54 +27,42 @@
   <div class="text-2xl text-center m-4">Our Team</div>
 
   <div class="flex justify-center items-center flex-row flex-wrap">
-    <%- include('./partials/team-member.ejs',
-        { "avatar": "https://media.licdn.com/dms/image/D4D03AQG3iV0lxuvsqQ/profile-displayphoto-shrink_800_800/0/1694248599958?e=1727913600&v=beta&t=e0kpSL73DuPidpEu3yxQYWQCUi69d8uJnfgFE9JKZaA" , 
-          "name" : "Chandanbir Singh",
-          "description" : "CrowdStrike Intern #1", 
-          "linkedinurl" : "", 
-          "githuburl" : "" 
-          }) 
-    %>
-        
-    <%- include('./partials/team-member.ejs',
-          { "avatar": "/assets/ekuspreet.jpg" , 
-            "name" : "Ekuspreet Singh",
-            "description" : "CrowdStrike Intern #2", 
-            "linkedinurl" : "", 
-            "githuburl" : "" 
-            }) 
-    %>
-          
-    <%- include('./partials/team-member.ejs',
-    { "avatar": "https://media.licdn.com/dms/image/D5603AQFpuEZHDR30XQ/profile-displayphoto-shrink_800_800/0/1722441823217?e=1727913600&v=beta&t=t9QFWUWzTWpIRqm4nhH88doL2Y_BJZlQCDW92Q3pPSI" , 
-      "name" : "Ankush Makkar",
-      "description" : "CrowdStrike Intern #3", 
-      "linkedinurl" : "", 
-      "githuburl" : "" 
-      }) 
-    %>
-    <%- include('./partials/team-member.ejs',
-    { "avatar": "https://media.licdn.com/dms/image/C5603AQFSE1bys5P24w/profile-displayphoto-shrink_800_800/0/1647158429721?e=1727913600&v=beta&t=rRVTJ8-7dTkHeU7xqngMeljTNuhsTuZUuZ46v8q3ttU" , 
-      "name" : "Dilraj Singh",
-      "description" : "CrowdStrike Intern #4", 
-      "linkedinurl" : "", 
-      "githuburl" : "" 
-      }) 
-    %>
+    <div>
+      <%- include('./partials/team-member.ejs', { "avatar":
+      "https://media.licdn.com/dms/image/D4D03AQG3iV0lxuvsqQ/profile-displayphoto-shrink_800_800/0/1694248599958?e=1727913600&v=beta&t=e0kpSL73DuPidpEu3yxQYWQCUi69d8uJnfgFE9JKZaA"
+      , "name" : "Chandanbir Singh", "description" : "CrowdStrike Intern #1",
+      "linkedinurl" : "", "githuburl" : "" }) %>
+    </div>
+    <div>
+      <%-
+    include('./partials/team-member.ejs', { "avatar": "/assets/ekuspreet.jpg" ,
+    "name" : "Ekuspreet Singh", "description" : "CrowdStrike Intern #2",
+    "linkedinurl" : "", "githuburl" : "" }) %>
+    </div>
 
+    <%-
+    include('./partials/team-member.ejs', { "avatar":
+    "https://media.licdn.com/dms/image/D5603AQFpuEZHDR30XQ/profile-displayphoto-shrink_800_800/0/1722441823217?e=1727913600&v=beta&t=t9QFWUWzTWpIRqm4nhH88doL2Y_BJZlQCDW92Q3pPSI"
+    , "name" : "Ankush Makkar", "description" : "CrowdStrike Intern #3",
+    "linkedinurl" : "", "githuburl" : "" }) %>
+    <%-
+    include('./partials/team-member.ejs', { "avatar":
+    "https://media.licdn.com/dms/image/C5603AQFSE1bys5P24w/profile-displayphoto-shrink_800_800/0/1647158429721?e=1727913600&v=beta&t=rRVTJ8-7dTkHeU7xqngMeljTNuhsTuZUuZ46v8q3ttU"
+    , "name" : "Dilraj Singh", "description" : "CrowdStrike Intern #4",
+    "linkedinurl" : "", "githuburl" : "" }) %>
   </div>
-</div>
-
+</section>
 
 <!-- About project section -->
 
 <div class="divider"></div>
 
-<div class="hero  py-10" id="about-us">
+<div class="hero py-10" id="about-us">
   <div class="hero-content flex-col lg:flex-row">
     <img
       src="http://localhost:3000/assets/logo.svg"
-      class="max-w-sm rounded-lg shadow-2xl" />
+      class="max-w-sm rounded-lg shadow-2xl"
+    />
     <div>
       <h1 class="text-5xl font-bold">About Our Project</h1>
       <p class="py-6 text-xl">
@@ -77,9 +70,7 @@
         securely record and timestamp their creative works. Our platform
         provides insights into intellectual property protection and helps
         safeguard your ideas.
-
       </p>
-
     </div>
   </div>
 </div>

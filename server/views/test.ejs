@@ -1,0 +1,18 @@
+<div class="flex flex-col mx-auto w-full">
+  <h1>Smart Contract Interaction</h1>
+  <form
+    id="issue-idea-form"
+    class="flex flex-col mx-auto w-full gap-2 max-w-96"
+  >
+    <input type="text" id="title" placeholder="Title" required />
+    <input type="text" id="inventor" placeholder="Inventor" required />
+    <textarea id="description" placeholder="Description" required></textarea>
+    <input type="text" id="fileUrl" placeholder="File URL" required />
+    <button type="submit">Issue Idea</button>
+  </form>
+  <button id="connect-wallet" onclick="connectWallet()" class="btn">
+    connect wallet
+  </button>
+
+  <div id="idea-details"></div>
+</div>

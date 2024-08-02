@@ -8,7 +8,7 @@ router.get("/github-source", (req, res) => {
 });
 
 router.get("/video-demo-youtube", (req, res) => {
-  res.redirect("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+  res.redirect("https://youtu.be/xqm0U-K35AU");
 });
 
 module.exports = router;

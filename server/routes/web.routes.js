@@ -7,6 +7,7 @@ const authPageController = require("@controllers/web/authPage.controller");
 const policyPageController = require("@controllers/web/policyPage.controller");
 const homePageController = require("@controllers/web/homePage.controller");
 const redirectController = require("@controllers/web/redirect.controller");
+
 module.exports = (app) => {
   // all controllers will export an instance of Router Class. (Not the actual functions).
   app.use("/status", statusController);
